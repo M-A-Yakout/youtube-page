@@ -1,0 +1,186 @@
+// import size 10px
+@use "./sass/variables/size" as *;
+
+// import colors
+
+@use "./sass/variables/colors" as *;
+
+// import display center for flex
+
+@use "./sass/mixins/mixins" as *;
+
+//import font
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: rgb(248, 245, 245);
+}
+
+header {
+  background-color: $whiteColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  border-bottom: ($size - 7) solid $grayColor;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  width: $size * 15;
+  gap: $size;
+  padding-left: $size;
+  & img {
+    width: 100%;
+  }
+
+  & i {
+    cursor: pointer;
+  }
+
+  & .menu-list {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    height: $fullheight;
+    top: 0;
+    width: $inputSize - 5;
+    background-color: $whiteColor;
+    margin-top: $size + 30;
+    padding-top: $size + 10;
+    overflow-y: auto;
+
+    img {
+      width: $size + 5;
+      height: $size + 10;
+      border-radius: $ciracl;
+      object-fit: cover;
+    }
+
+    & ul {
+      padding-left: $size;
+
+      & hr {
+        width: $size * 20;
+        margin: $size 0;
+      }
+    }
+
+    & ul li {
+      display: flex;
+      align-items: center;
+      gap: $size;
+      list-style: none;
+    }
+
+    & a {
+      text-decoration: none;
+      color: black;
+      display: flex;
+      align-items: center;
+      gap: $size;
+      padding: $size 0;
+      & img {
+        width: $size + 10;
+      }
+    }
+  }
+}
+
+.mid-section {
+  display: flex;
+  align-items: center;
+
+  & form {
+    display: flex;
+    padding-right: $size;
+  }
+
+  & form input {
+    width: $inputSize + 5;
+  }
+
+  & form i {
+    font-size: $size + 5;
+    padding: ($size - 5) $size;
+  }
+  & i {
+    padding: $size - 9;
+    cursor: pointer;
+  }
+  & .mic {
+    border-radius: $ciracl;
+    padding: $size - 5;
+    font-size: $size * 2;
+    background-color: $grayColor;
+  }
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: $size;
+  padding-right: $size;
+
+  & a {
+    color: $blackColor;
+  }
+}
+
+main {
+  margin-left: $inputSize - 1;
+  padding: ($size + 20px) ($size * 3);
+}
+
+.cards {
+  @include display-center;
+  flex-wrap: wrap;
+  gap: $size + 10;
+}
+
+.box {
+  @include display-center;
+  flex-direction: column;
+  width: 400px;
+  cursor: pointer;
+
+  & img {
+    width: 100%;
+  }
+
+  & .text .desc p {
+    font-weight: 600;
+  }
+
+  & .text .desc .view p {
+    font-weight: normal;
+  }
+
+  & .text {
+    padding-bottom: $size + 30;
+  }
+
+  & .text {
+    @include display-center;
+    gap: $size;
+    align-self: flex-start;
+    padding-top: $size - 5;
+  }
+
+  & .text img {
+    width: $size * 5;
+    height: $size * 5;
+    border-radius: $ciracl;
+    object-fit: cover;
+  }
+}

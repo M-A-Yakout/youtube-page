@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: rgb(248, 245, 245);
+}
+
+header {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  border-bottom: 3px solid rgba(128, 128, 128, 0.1058823529);
+}
+
+.left-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150px;
+  gap: 10px;
+  padding-left: 10px;
+}
+.left-section img {
+  width: 100%;
+}
+.left-section i {
+  cursor: pointer;
+}
+.left-section .menu-list {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  height: 100vh;
+  top: 0;
+  width: 15rem;
+  background-color: white;
+  margin-top: 40px;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+.left-section .menu-list img {
+  width: 15px;
+  height: 20px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.left-section .menu-list ul {
+  padding-left: 10px;
+}
+.left-section .menu-list ul hr {
+  width: 200px;
+  margin: 10px 0;
+}
+.left-section .menu-list ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+.left-section .menu-list a {
+  text-decoration: none;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+.left-section .menu-list a img {
+  width: 20px;
+}
+
+.mid-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mid-section form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 10px;
+}
+.mid-section form input {
+  width: 25rem;
+}
+.mid-section form i {
+  font-size: 15px;
+  padding: 5px 10px;
+}
+.mid-section i {
+  padding: 1px;
+  cursor: pointer;
+}
+.mid-section .mic {
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 20px;
+  background-color: rgba(128, 128, 128, 0.1058823529);
+}
+
+.right-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding-right: 10px;
+}
+.right-section a {
+  color: black;
+}
+
+main {
+  margin-left: 19rem;
+  padding: 30px 30px;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  cursor: pointer;
+}
+.box img {
+  width: 100%;
+}
+.box .text .desc p {
+  font-weight: 600;
+}
+.box .text .desc .view p {
+  font-weight: normal;
+}
+.box .text {
+  padding-bottom: 40px;
+}
+.box .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-top: 5px;
+}
+.box .text img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
