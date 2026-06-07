@@ -192,3 +192,66 @@ main {
     object-fit: cover;
   }
 }
+
+@media (max-width: 768px) {
+  .left-section .menu-list {
+    display: none;
+  }
+
+  main {
+    margin-left: 0;
+    padding: $size $size;
+  }
+
+  .mid-section form input {
+    width: 150px;
+    margin-left: 0;
+  }
+
+  .right-section {
+    gap: 5px;
+
+    a:nth-child(1),
+    a:nth-child(2) {
+      display: none;
+    }
+  }
+
+  .box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 5px;
+  }
+
+  .left-section {
+    width: auto;
+
+    & .youtube-logo {
+      width: $size * 10;
+    }
+  }
+
+  .mid-section form input {
+    width: 100px;
+  }
+
+  .mid-section .mic {
+    display: none;
+  }
+
+  .right-section a:nth-child(3) {
+    display: none;
+  }
+
+  .cards {
+    gap: $size;
+  }
+
+  .box {
+    width: 100%;
+  }
+}
